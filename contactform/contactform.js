@@ -3,7 +3,7 @@ function sendContact() {
 	valid = validateContact();
 	if(valid) {
 		jQuery.ajax({
-		url: "contactform/contactform.php",
+		url: "https://mdizajn.me/contactform/contactform.php",
 		data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&subject='+$("#subject").val()+'&content='+$(content).val(),
 		type: "POST",
 		success:function(data){
