@@ -3,9 +3,10 @@ function sendContact() {
 	valid = validateContact();
 	if(valid) {
 		jQuery.ajax({
+		type: "POST",
 		url: "https://mdizajn.me/contactform/contactform.php",
 		data:'userName='+$("#userName").val()+'&userEmail='+$("#userEmail").val()+'&subject='+$("#subject").val()+'&content='+$(content).val(),
-		type: "POST",
+		contentType: "application/json; charset=utf-8",
 		success:function(data){
 		$("#mail-status").html(data);
 		},
